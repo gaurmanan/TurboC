@@ -23,8 +23,9 @@ void main(void)
    int gdriver = DETECT, gmode, errorcode;
    initgraph(&gdriver, &gmode, "");
 
-   //intro();
+   intro();
    while(1){
+   cleardevice();
    gofirst();
    tf = getch();
    if(tf== '1')
@@ -33,7 +34,7 @@ void main(void)
 	{ b[1] = 'X';	b[0] = 'O';}
    for(i =0; i <9; i++)
 	a[i] = '1'+i;
-   for(i = 0;i<=15 ; i++)
+   for(i = 0;i<=8 ; i++)
    {
 	cleardevice();
 	draw(&a[0]); f2 = 1;
@@ -58,7 +59,7 @@ void main(void)
 	clrscr();
    }
    cleardevice();
-   draw(&a[0]); getch();
+   draw(&a[0]);
    cleardevice();
    draw_win(f); tf = 'c';
    getch();
@@ -189,9 +190,6 @@ void intro()
 		delay(50);
 		cleardevice();
 	}
-	getch();
-	cleardevice();
-	exit(0);
 }
 
 void manan()
@@ -260,7 +258,5 @@ void loading(int i){
 	settextstyle(1,0,2);
 	outtextxy(80,getmaxy()-30,a);
 	setcolor(RED);
-	rectangle(10,20,((getmaxx()-10)*i/100),20);
-	//setfillstyle(8,);
-	//floodfill(11,11,4);
+	//rectangle(10,20,(getmaxx()*i/100),20);
 }
