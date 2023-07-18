@@ -21,4 +21,3 @@ In this project a TicTacToe game is developed using primitve TurboC Libraries su
 ## Authors
 
 * **Manan Gaur** - [gaurmanan](https://github.com/gaurmanan)
-* **Dharini Sharma**
